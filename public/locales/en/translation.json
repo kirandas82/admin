@@ -1,0 +1,62 @@
+{
+  "welcome_message": "Welcome to the app!",
+  "login":"Login",
+  "logout": "Logout",
+  "password":"Password",
+  "username":"Username",
+  "logging_in":"Logging in...",
+    "validation": {
+        "user_name": {
+            "required": "Username is required",
+            "invalid": "Enter a valid username"
+        },
+        "password": {
+            "required": "Password is required",
+            "minLength": "Password must be at least 6 characters long"
+        }
+    },
+    "sidenav":{
+        "db":{
+            "label":"Dashboard"          
+        },
+
+        "rm":{
+            "label":"Route Management",
+            "submenu_1": "Add A New Metro/Tram/Bus Stop",
+            "submenu_2": "Remove Metro/Tram/Bus Stop",
+            "submenu_3": "Update Line/Route",
+            "submenu_4": "Mange Station/Stop & Line/Route",
+            "submenu_5": "Import Schedule",
+            "submenu_6": "Setup Check-In Only Mode",
+            "submenu_7": "Setup Check-Out Only Mode"
+        },
+        "tm":{
+            "label":"Tariff Management",
+            "submenu_1": "Tariff Configuration"
+        },
+        "dm":{
+            "label":"Device Management",
+            "submenu_1": "Blacklist",
+            "submenu_2": "Add New Device",
+            "submenu_3": "Add Device in Bulk",
+            "submenu_4": "Block/Unblock Devices",
+            "submenu_5": "Device Level Monitoring",
+            "submenu_6": "DOD Distribution",
+            "submenu_7": "DOD Status Check",
+            "submenu_8": "Software Distribution",
+            "submenu_9": "Software Status Check"
+        },
+        "st":{
+            "label":"Settlement & Reconciliation"
+        },
+        "am":{
+            "label":"Alarm/Event Management",
+            "submenu_1": "Add An Alarm/Event",
+            "submenu_2": "Bulk Upload Alarm/Event",
+            "submenu_3": "Modify Alarm/Event"
+        }
+        
+
+    }
+
+}

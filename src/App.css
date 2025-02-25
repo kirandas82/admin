@@ -1,0 +1,7 @@
+
+.content{
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+    border-radius: 30px !important;
+    margin-top: 2.8rem;
+  }
