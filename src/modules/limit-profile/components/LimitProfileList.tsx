@@ -1,44 +1,39 @@
-import { capitalizeName } from '../utils/formatUtils';
-import { useFetchUsers } from '../hooks/LimitProfileFetch';
-import { useState } from 'react';
 
-import { Card, CardHeader, CardContent } from '@mui/material';
+
+import { Box, Stack, Card, CardHeader, CardContent } from '@mui/material';
+import { DataGrid } from '@mui/x-data-grid';
+import { useFetchLimiProfile } from '../hooks/LimitProfileFetch';
+
 
 const LimitProfileList = () => {
-  const { users, loading } = useFetchUsers();  // Using custom hook for fetching users
-  const [searchTerm, setSearchTerm] = useState(''); // State to manage search term
+  const { rows, loading } = useFetchLimiProfile();  // Using custom hook for fetching users
 
-  // Filter users based on the search term
-  const filteredUsers = users.filter((user: any) =>
-    user.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+
+  // Define columns for the DataGrid
+  const columns = [
+    { field: 'id', headerName: 'ID', width: 90 },
+    { field: 'name', headerName: 'Name', width: 150 },
+    { field: 'age', headerName: 'Age', width: 110 },
+    { field: 'email', headerName: 'Email', width: 200 },
+  ];
+
 
   // Render the limit list with search
   return (
-<div>
+    <div>
       <Card className='content'>
         <CardHeader title="Limit Profile List" />
         <CardContent>
-          <input
-            type="text"
-            placeholder="Search config..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          {loading ? (
-            <p>Loading...</p>
-          ) : filteredUsers.length > 0 ? (
-            <ul>
-              {filteredUsers.map((user: any) => (
-                <li key={user.id}>
-                  <p><strong>Name:</strong> {capitalizeName(user.name)}</p>
-                  <p><strong>Email:</strong> {user.email}</p>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p>No users found.</p>
-          )}
+          <Box sx={{ width: '100%' }}>
+            <Stack direction="row" spacing={1} sx={{ mb: 1 }}>
+            </Stack>
+            <DataGrid
+              rows={rows}
+              columns={columns}
+              loading={loading}
+              // checkboxSelection
+            />
+          </Box>
         </CardContent>
       </Card>
     </div>

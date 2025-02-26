@@ -1,7 +1,7 @@
 /* @import '../src/config/themeConfig.tsx'; */
 
 html,body,#root{
-  height: 100%;
+  /* height: 100%; */
   background-color: var(--background-color) !important;
 }
 /* side bar nav */

@@ -10,15 +10,14 @@ import { useTranslation } from 'react-i18next';
 import zIndex from '@mui/material/styles/zIndex';
 
 const AppHeader = ({ toggleSidebar, toggleRtl, isRtl }: any) => {
+    
     const { t, i18n } = useTranslation(); // TypeScript will infer types automatically
     const changeLanguage = (lang: string) => {
         i18n.changeLanguage(lang);
-    };
-
-    
+    }; 
 
     return (
-        <AppBar position='sticky' sx={styles.appBar}>
+        <AppBar position='relative' sx={styles.appBar}>
             <Toolbar sx={styles.toolBar}>
                 <IconButton onClick={toggleSidebar} color='primary'>
                     <MenuTwoToneIcon></MenuTwoToneIcon>

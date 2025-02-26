@@ -123,7 +123,7 @@ const styles = {
     top: '0px',
     left: '0px',
     width: '100%',
-    height: '50%',
+    height: '320px',
     backgroundColor: '#b4b5da',
     zIndex: 1,
     opacity: 0.5,

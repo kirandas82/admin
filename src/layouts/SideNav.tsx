@@ -69,6 +69,7 @@ function SideNav({  collapsed, toggled, toggleSidebar, isRtl, onSubMenuToggle, i
                     }
                 }
             }}>
+                
                 <Box component={'img'} sx={styles.appLogo} src='src/assets/images/logo.png' className='logo'/>
                 {/* Dashboard */}
                 <MenuItem active={location.pathname === '/dashboard'} component={<Link to='/dashboard' />} icon={<DashboardOutlinedIcon />}>
